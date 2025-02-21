@@ -1,0 +1,188 @@
+:root {
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #b3b3b3;
+    --green: #4CAF50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: var(--text-primary);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        rgb(32, 32, 32) 0%,
+        rgb(17, 17, 17) 50%,
+        rgb(0, 0, 0) 100%
+    );
+    padding: 10px;
+}
+
+.box {
+    width: 100%;
+    max-width: 600px;
+    min-height: 350px;
+    background: rgba(52, 52, 52, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 100px auto 20px;
+}
+
+h2 {
+    color: var(--text-primary);
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+h2 img {
+    width: 24px;
+    height: 24px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10px;
+    border-radius: 10px;
+}
+.buttons button {
+    font-size: 16px;
+    font-weight: 500;
+    width:33.3%;
+    padding: 10px 0;
+    margin: 10px 0;
+    color: #ffffff;
+    background: linear-gradient(135deg, #444, #333);
+    border: none; 
+    border-bottom: 4px solid transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.buttons :nth-child(3){
+    border-radius: 0 5px 5px 0;
+}
+.highlight{
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+    border-bottom: 4px solid #4CAF50 !important;
+}
+
+.input button {
+    padding: 8px 23px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--green);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+
+.input button:hover {
+    background-color: var(--green);
+}
+
+ul {
+    padding-left: 25px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+}
+p{
+    max-width: 80%;
+    min-height: auto;
+    word-wrap: break-word;
+    margin-left:7px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;  
+    background-image: url(images/icons8-square-50.png);
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    left: -24px;
+    transform: translateY(-50%);
+}
+
+ul li.checked p{
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/icons8-tick-50.png);
+    background-color:var(--green);
+    background-size: 30px;
+    border-radius: 7px;
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #e74c3c;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+ul li span:hover {
+    background: rgba(231, 76, 60, 0.2);
+    color: #ff6b6b;
+}
