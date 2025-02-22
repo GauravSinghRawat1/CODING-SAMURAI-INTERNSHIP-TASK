@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landingpage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo"><img src="/images/Vector.svg" alt="">
+                <h1>Tour&Travel</h1>
+            </div>
+            <div id="sidebar">
+                <button onclick="sidebar_close()" class="crossbutton"><img src="images/cross-svgrepo-com.svg"
+                        alt=""></button>
+                <a href="">About</a>
+                <a href="">Destination</a>
+                <a href="">Tour</a>
+                <a href="">Blog</a>
+                <a href="">Login</a>
+                <a href="">SignUp</a>
+            </div>
+            <div class="links">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Destination</a>
+                <a href="">Tour</a>
+                <a href="">Blog</a>
+            </div>
+            <div class="loginandsignup">
+                <a href="" id="login">Login</a>
+                <a href="" id="signup">SignUp</a>
+            </div>
+            <button id="menubutton" onclick="sidebar_open()"><img src="images/icons8-menu.svg" alt=""></button>
+
+        </div>
+        <div class="contents">
+            <div class="leftside">
+                <h1>Get Started your exciting <span style="color:rgb(250,116,54)">journey</span> with us.</h1>
+                <p>A Team of experienced tourism professionals will provide you with the best advice and tips for your
+                    desire place</p>
+                <button>Discover Now</button>
+            </div>
+
+            <div class="rightside">
+                <img src="images/5795664.jpg" alt="">
+            </div>
+        </div>
+        <div class="searchbar">
+            <div class="location">
+                <div class="details">Location:</div>
+                <input type="text" placeholder="Where are you going" onfocus="this.placeholder = ''" onblur="this.placeholder='Where are you going'">
+
+            </div>
+            <div class="date">
+                <div class="details">
+                    Date:
+                </div>
+                <input type="text" placeholder="When you will go" onfocus="this.type='date'"
+                    onblur="if(!this.value) this.type='text'">
+            </div>
+
+            <div class="guest">
+                <div class="details">Guest:</div>
+                <input type="text" placeholder="Number of guest" onfocus="this.placeholder = ''" onblur="this.placeholder='Number of guest'">
+            </div>
+            <button>Explore Now</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
